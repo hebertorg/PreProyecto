@@ -32,7 +32,7 @@ public class OperationController {
     @RequestMapping(value = "/createpre", method = RequestMethod.GET)
     public String goCreatePre(Model model) {
         List<Cliente> clientes = clienteservice.getAllClientes();
-        List<PreProyecto> proyectos = preservice.getAllPreProyecto();
+        List<PreProyecto> proyectos = preservice.getAllPreProyectos();
         model.addAttribute("clientes", clientes);
         model.addAttribute("proyectos", proyectos);
         return "createpre";
